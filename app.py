@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+import os
+app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'templates'))
 
 def calculate_love_percentage(name, name1):
     name = name.lower()
